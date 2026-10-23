@@ -14,8 +14,18 @@ history used to test these scripts. Enter it before running the test commands:
 cd test-git-repo
 ```
 
-See [`test-git-repo/README.md`](test-git-repo/README.md) for the fixture
-history, test commands, and reset instructions.
+See [`tests/README.md`](tests/README.md) for the fixture history, test
+commands, and reset instructions.
+
+The repeatable test runners are:
+
+```sh
+./tests/run-tests.sh
+```
+
+```powershell
+.\tests\run-tests.ps1
+```
 
 On Windows PowerShell, run the `.ps1` versions from `test-git-repo`:
 
