@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# swap-with-parent.sh <commit-id>
-# 交换 <commit-id> 与其父提交的位置
+# swap-with-parent.sh <commit-ish>
+# 交换 <commit-ish> 与其父提交的位置
 # 例: A→B→C→D 传入 B  =>  B→A→C→D
 # 临时分支基于父的父(GRANDPARENT)创建; 原分支全程不动
 
 set -euo pipefail
 
-[ $# -eq 1 ] || { echo "用法: $0 <commit-id>"; exit 1; }
+[ $# -eq 1 ] || { echo "用法: $0 <commit-ish>"; exit 1; }
 
 TARGET=$(git rev-parse --verify "${1}^{commit}") || { echo "错误: 无效 commit"; exit 1; }
 
